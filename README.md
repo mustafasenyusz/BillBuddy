@@ -1,39 +1,65 @@
-BillBuddy - Akıllı Fatura ve Finans Yönetim Sistemi
+# BillBuddy
 
-TR BillBuddy, modern mobil teknolojilerle geliştirilmiş, kullanıcı dostu bir akıllı fatura ve harcama yönetim uygulamasıdır. Bekleyen ödemelerinizi takip etmenizi, geçmiş harcamalarınızı incelemenizi ve hesap güvenliğinizi en üst düzeyde tutmanızı sağlar.
+> A polished mobile workspace for organizing bills, due dates, and personal payment history.
 
-EN BillBuddy is a user-friendly smart bill and expense management application built with modern mobile technologies. It allows you to track pending payments, review past expenses, and maintain account security at the highest level.
+![React Native](https://img.shields.io/badge/React_Native-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![Expo](https://img.shields.io/badge/Expo-000020?style=flat-square&logo=expo&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Redux](https://img.shields.io/badge/Redux_Toolkit-764ABC?style=flat-square&logo=redux&logoColor=white)
 
-Projenin Teknik Altyapısı ve Yetenekleri
+## Overview
 
-TypeScript ve Modern Mimari: Uygulamanın tamamında tam tip güvenliği sağlanarak hatasız ve ölçeklenebilir bir kod tabanı oluşturulmuştur.
+BillBuddy is one of my frontend-focused React Native projects. It combines typed state management, persistent local data, file-based navigation, and a detailed mobile interface in a complete bill-management experience.
 
-Redux Toolkit State Yönetimi: Kullanıcı kimlik doğrulama süreçleri, fatura verileri ve sistem durumları, merkezi bir mağaza yapısında yönetilmektedir.
+## Product features
 
-Expo Router: Dosya tabanlı navigasyon mimarisi ile temiz, performanslı ve akıcı bir sayfa geçişi sağlanmıştır.
+- Register and sign in through a structured onboarding flow
+- Add bills with payment details and due dates
+- Review active and historical bill records
+- Update account data and password within the local app flow
+- Restore user and bill state after restarting the application
+- Access help, FAQ, product, and developer information screens
 
-Güvenli Auth Mekanizmaları: Redux slice yapıları ile kullanıcı bazlı veri izolasyonu ve güvenli şifre değiştirme veya oturum yönetimi entegre edilmiştir.
+## Frontend focus
 
-Kapsamlı Modüler Tasarım: Kurumsal standartlarda geliştirilen destek, yardım, geliştirici ve kullanıcı profili ekranları ile tam bir kullanıcı deneyimi sunulmaktadır.
+The project is designed around reusable screens, clear visual hierarchy, responsive layouts, and predictable state transitions. Redux slices isolate user and bill operations, while Redux Persist and AsyncStorage provide a continuous local experience.
 
-Teknolojik Donanım
+## Tech stack
 
-Framework: Expo ve React Native
+| Area | Technology |
+| --- | --- |
+| Mobile UI | React Native, Expo |
+| Language | TypeScript |
+| Navigation | Expo Router |
+| State | Redux Toolkit, React Redux |
+| Persistence | Redux Persist, AsyncStorage |
+| UI details | Expo Blur, Haptics, Lucide icons |
 
-Dil: TypeScript
+## Project structure
 
-State Management: Redux Toolkit
+```text
+app/       authentication, dashboard, bills, support screens
+store/     user and bill slices, store configuration
+assets/    application branding
+constants/ shared theme values
+```
 
-Navigasyon: Expo Router
+## Run locally
 
-İkon Setleri: Lucide React Native ve Expo Vector Icons
+```bash
+git clone https://github.com/mustafasenyusz/BillBuddy.git
+cd BillBuddy
+npm install
+npx expo start
+```
 
-Tasarım: React Native StyleSheet ve Responsive UI
+## Next steps
 
-Dosya ve Klasör Hiyerarşisi
+- Add automated tests for reducers and important user flows
+- Introduce reusable form and feedback components
+- Improve validation and accessibility
+- Connect the client to an API-backed account and bill service
 
-app/: Uygulamanın tüm arayüz katmanı, kimlik doğrulama, fatura yönetimi ve destek sayfalarını içeren dosya tabanlı rota yapısı.
+## Developer
 
-store/: Uygulamanın merkezi hafızası; Kullanıcı ve Fatura durumlarını yöneten Slice ve Store yapılandırması.
-
-package.json: Proje bağımlılıkları ve konfigürasyon dosyası.
+Built by [Mustafa Şenyüz](https://github.com/mustafasenyusz), focused on React Native frontend development and growing full-stack skills.
